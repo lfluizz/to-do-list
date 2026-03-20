@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #557f8f, #6b9dad);
+    /* background: linear-gradient(135deg, #4f8a8b, #6fb1a0); */
+    color: white;   
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    /* background-color: rgba(255, 255, 255, 0.15); */
+    background-color: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 400px;
+    width: 350px;
+    overflow: auto;
+
+}
+
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputTask{
+    padding: 5px 0 5px 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.inputTask.erro{
+    border: 0.5px solid red;
+
+}
+
+.alerta {
+    min-height: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    color: #ff6b6b;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.alerta.erro{
+    opacity: 1;
+    visibility: visible;
+}
+
+button{
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    
+}
+
+.list li {
+    /* background-color: rgba(255, 255, 255, 0.15); */
+    background-color: rgb(24, 24, 24);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-break: break-all;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.list li.completed {
+    background-color: green;
+}
+
+.task-text {
+    padding-left: 5px;
+}
+
+.list li.completed .task-text {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.icons {
+    display: flex;
+    text-decoration: none;
+    margin-left: 20px;
+    gap: 15px;
+}
+
+.btn-icon {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.removeTask:hover{
+    color: #EE4B2B;
+}
+
+.completeTask:hover{
+    color: lightgreen;
+}
+
+
